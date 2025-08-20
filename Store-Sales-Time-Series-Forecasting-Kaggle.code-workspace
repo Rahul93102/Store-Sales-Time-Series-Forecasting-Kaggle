@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"name": "Store-Sales-Time-Series-Forecasting-Kaggle",
+		"path": "."
+	},
+	{
+		"path": "../gate/GATE DA/Notes & Questions/Sales-forecast-LSTM-master/dataset"
+	}
+],
+  "settings": {
+    "sarif-viewer.connectToGithubCodeScanning": "off"
+  }
+}
