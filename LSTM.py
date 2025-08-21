@@ -16,26 +16,21 @@ import matplotlib.pyplot as plt
 import time,datetime
 import math
 
-###导入自己的文件 开始###
 
 from LSTMInputDataPreprocess import *
 
-###导入自己的文件 结束###
 
 def root_mean_squared_error(y_pred,y_true):
     return K.sqrt(K.mean(K.square(y_pred - y_true)))
 
 def loadData():
-    ###todo : 导入数据 开始###
     data = np.loadtxt(r'D:\Course Plus\CCMATH\第十二届华中地区数学建模大赛B题\回归数据\train_data.txt',
                       encoding='utf-8', skiprows=0, delimiter=',')  # 读取数据文件
 
     data = np.log10(data + 1)
 
-    X = data[:, :-1]  # 分割自变量
-    Y = data[:, -1]  # 分割因变量
-    ###todo : 导入数据 结束###
-
+    X = data[:, :-1]  
+    Y = data[:, -1]  
     return X,Y
 
 def buildConvLSTM(output_size=1, steps = 1,dropout=0.3):
