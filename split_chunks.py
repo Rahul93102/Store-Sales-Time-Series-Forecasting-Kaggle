@@ -6,7 +6,7 @@ data = pd.DataFrame(pd.read_excel(r'D:\Course Plus.xlsx'))
 
 # print(data)
 
-img_ID = data.ix[:,['图片链接','货号','上新日期']].values
+img_ID = data.ix[:,['rahul_dir']].values
 BaseDir = r'D:\Course Plus\CCMATH'
 
 for img_url,filename,update in img_ID:
